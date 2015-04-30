@@ -2,6 +2,15 @@ package shapeExcersice;
 
 public class Circle extends Shape implements Drawable{
 	private int radius;
+	public Circle() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public Circle(int radius) {
+		super();
+		this.radius = radius;
+	}
+
 	public int getRadius() {
 		return radius;
 	}
@@ -24,5 +33,10 @@ public class Circle extends Shape implements Drawable{
 		}else{
 			System.out.println("원을 지웠습니다.");						
 		}
+	}
+
+	@Override
+	public void draw(int count) {
+		System.out.println("원을 "+count+"개 그렸습니다.");		
 	}
 }

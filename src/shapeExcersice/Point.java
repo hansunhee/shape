@@ -3,6 +3,13 @@ package shapeExcersice;
 public class Point implements Visible, Drawable{
 	private int x;
 	private int y;
+	public Point() {
+	}
+	public Point(int x, int y) {
+		super();
+		this.x = x;
+		this.y = y;
+	}
 	public int getX() {
 		return x;
 	}
@@ -26,6 +33,10 @@ public class Point implements Visible, Drawable{
 		}else{
 			System.out.println("좌표[x=" + x + ", y=" + y +"]에 점을 지웠습니다.");						
 		}
+	}
+	@Override
+	public void draw(int count) {
+		System.out.println("좌표[x=" + x + ", y=" + y +"]에 점을 "+count+"개 그렸습니다.");		
 	}
 	
 	
